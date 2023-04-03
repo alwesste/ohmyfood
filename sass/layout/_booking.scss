@@ -1,0 +1,31 @@
+.booking {
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 287.5px;
+    &__title {
+        margin-top: 40px;
+        width: 70%;
+    }
+    & p {
+        width: 80%;
+        margin-bottom: 30px;
+        margin-top: 0px;
+    }
+    &__btn {
+        @include btn;
+        width: 50%;
+        padding: 15px;
+        cursor: pointer;
+        
+        & a {
+            color: white;
+            text-decoration: none;
+            }
+        
+        
+    }
+}
+

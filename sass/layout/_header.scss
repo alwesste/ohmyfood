@@ -1,0 +1,32 @@
+.header {        
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        &__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 63px;
+        margin: auto;
+        width: 100%;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);    
+        z-index: 1;
+
+        
+    }
+    &__location {
+        background-color: $locationColor;   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        margin: auto;
+        
+        & i {
+            margin-right: 10px;
+        }
+    
+    }
+    
+}

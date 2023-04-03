@@ -1,0 +1,48 @@
+.working {
+    margin: 20px;
+    height: 440px;
+    &__title {
+        margin-top: 50px;
+    }
+    }
+
+.bloc__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.list {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 80%;
+    @include border;
+    border-radius: 20px;
+    padding: 20px;
+    &__number {
+        position: absolute;
+        left: - 12px;
+        border: solid 1px #9356DC;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        background-color: #9356DC;
+    }
+    & a {
+        text-decoration: none;
+        color: inherit;
+    }
+    & i {
+        padding-right: 10px;
+        margin-left: 10px;
+    }
+}
