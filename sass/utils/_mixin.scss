@@ -1,11 +1,18 @@
 @mixin btn {
     border-radius: 25px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    background: linear-gradient(180deg, #FF79DA -11.44%, #9356DC 123.93%);      
 };
+
 
 @mixin border {
     border: solid 0px;
     background: #F7F7F7;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
+
+@mixin imgSize {
+    width: 100%;
+    height: 350px; 
+    object-fit: cover;
+}
+

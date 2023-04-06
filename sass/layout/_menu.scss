@@ -1,0 +1,193 @@
+@media screen and (min-width: 0px) {
+
+    .menu {
+        position: relative;
+        top: -60px;
+        background-color: #F6F6F6;
+        padding: 20px 15px;
+        border-radius: 50px 50px 0 0;
+        box-sizing: border-box;
+        width: 100%;
+        z-index: 1;
+        
+        &__starter{
+            animation: fadeIn 1s;
+        }
+
+        &__mainMeal {
+            animation: fadeIn 1.5s;
+        }
+
+        &__desert {
+            animation: fadeIn 2s;
+        }
+
+        &__container {
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            @include border;
+            background-color: white;
+            border-radius: 20px; 
+            margin: 20px auto;
+            max-width: 600px;
+            width: 95%;  
+            padding: 0;
+            overflow: hidden; 
+
+            &:active .menu__slide {
+                transform: translatex(-75px);
+            }
+
+            & .menu__slide {
+                display: flex;
+                position: absolute;
+                height: 100%;
+                right:-100px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;                
+                transition: transform 0.25s;
+
+                &Price {
+                    display: flex;
+                    align-items: flex-end;
+                    width: 50px;
+                    font-weight: bold;
+                }
+    
+                &Check {
+                    position: relative;
+                    width: 100px;
+                    height: 150px;
+                    z-index: 1;                        
+                    bottom: 20px; 
+                    background-color: $mintColor;                       
+
+                    &::after {
+                        content: "\f058";
+                        width: 40px;
+                        height: 40px;
+                        font-family: "Font Awesome 5 Free";
+                        font-size: x-large;
+                        font-weight: 900;
+                        position: absolute;
+                        top: 32%;
+                        left: 25px;
+                        color: white;
+                    } 
+                }
+            }
+        }
+
+        &__title {
+            display: flex;
+            margin: auto;
+            padding: 30px 0px;
+            max-width: 600px;
+            padding-left: 10px;
+        }    
+
+        &__heart {
+            height: 20px;
+            padding-left: 50px;
+
+            & .heart--full{
+                display: none;
+                background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                -moz-background-clip: text;
+                -moz-text-fill-color: transparent;
+                animation: fadeIn 0.5s forwards;
+            }
+    
+            &:active{
+                & .heart--empty {
+                    display: none;
+                }
+    
+                & .heart--full {
+                    display: inline;
+                }
+            }
+            
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        
+
+        &__h2 {
+            margin: auto;
+            padding-top: 30px ;
+            width: 600px;
+
+
+        }
+
+        &__h2::after {
+            content: "";
+            display: block;
+            border-bottom: 3px solid #99E2D0;
+            padding-bottom: 5px;
+            width: 40px;
+            
+        }
+
+
+        &__content {
+            margin: 8px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+
+
+        }
+
+        &__btn {
+            display: flex;
+            @include btn;
+            background: $homePageBtn;
+            max-width: 190px;
+            padding: 15px;
+            cursor: pointer;
+            margin: 50px auto 30px auto;
+            justify-content: center; 
+            transition: all 1s ease; 
+            &:hover {
+                opacity: 0.8; 
+                box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.5);
+            } 
+
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+    
+    .menu {
+        width: 1055px;
+        margin: auto;
+        &__title {
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        &__container {
+            &:hover .menu__slide {
+                transform: translatex(-75px);
+            }
+  
+        }
+    }
+}
+

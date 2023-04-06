@@ -1,32 +1,56 @@
-.header {        
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-        &__title {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 63px;
-        margin: auto;
-        width: 100%;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);    
-        z-index: 1;
+@media screen and (min-width: 0px) {
 
-        
-    }
-    &__location {
-        background-color: $locationColor;   
+
+    .header {   
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        width: 100%;
-        height: 50px;
-        margin: auto;
-        
-        & i {
-            margin-right: 10px;
+            &__title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 63px;
+            margin: auto;
+            width: 100%;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);    
+            & i {
+                position: absolute;
+                top: 30px;
+                left: 40px;
+            }   
         }
-    
+
+        &__img {
+            @include imgSize;
+            position: relative;
+            z-index: 1;
+
+
+        }
+
+        &__location {
+            background-color: $locationColor;   
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+            margin: auto;
+            
+            & i {
+                margin-right: 10px;
+            }
+        
+        }
+        
     }
-    
+}
+
+@media screen and (min-width: 1100px) {
+    .header__title {
+        height: 100px;
+        & i {
+            padding-top: 20px;
+        }
+    }
 }

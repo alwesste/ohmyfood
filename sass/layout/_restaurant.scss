@@ -1,45 +1,119 @@
-.restaurant {
-    background-color: #F6F6F6;
-    padding-bottom: 65px;
-    &__title {
-        margin-left: 25px;
-        padding-top: 50px;
-    }
-}
+@media screen and (min-width: 0px) {
 
-.card {
-    position: relative;
-    height: 250px;
-    width: 90%;
-    margin: auto;
-    margin-bottom: 20px;
-    @include border;  
-    border-radius: 20px ;
 
-    &__image {
-        object-fit: cover;
-        height: 75%;
-        width: 100%;   
-        border-radius: 20px 20px 0px 0px;
+    .restaurant {
+        background-color: #F6F6F6;
+        padding-bottom: 65px;
+        &__title {
+            margin-left: 25px;
+            padding-top: 50px;
+        }
     }
 
-    &__content {
-        margin: 5px 0px 0px 10px;
+    .card {
+        position: relative;
+        height: 270px;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+        @include border;  
+        border-radius: 20px ;
+
+        &__image {
+            object-fit: cover;
+            height: 75%;
+            width: 100%;   
+            border-radius: 20px 20px 0px 0px;
+        }
+
+        &__info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $mintColor;
+            color: $mintDarkColor;
+            width: 80px;
+            height: 30px;
+            position: absolute;
+            top: 0px;
+            right: 30px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+            border-radius: 2px;
+        }
+
+        &__content {
+            margin: 5px 0px 0px 10px;
+        }
+
     }
 
-    &__icon {
+
+    .heart {
         position: absolute;
         right: 30px;
-        bottom: 30px;
-    }
+        bottom: 25px;
+        opacity: 1;
+        z-index: 1;
+        
+            
+        & .heart--full{
+            display: none;
+            background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+            animation: fadeIn 0.5s;
+   
+        }
 
-    &__icon:active,
-    &__icon:focus {
-        color:pink; 
-    }
+        &:hover{
 
-    
+            & .heart--empty {
+                display: none;
+            }
+
+            & .heart--full {
+                display: inline;
+
+                
+            }
+            
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 
+@media screen and (min-width: 1100px) {
 
+    .restaurant__menu {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        width: 1240px;
+    }
+
+    .restaurant__title {
+        width: 1120px;
+        margin: auto;
+        padding-bottom: 20px;
+
+    }
+    
+    .card {
+        width: 500px;
+        height: 22vh;
+        margin: 20px 55px;
+    }   
+    
+    .heart {
+        position: absolute;
+        right: 30px;
+        bottom: 20px;
+    }
+}

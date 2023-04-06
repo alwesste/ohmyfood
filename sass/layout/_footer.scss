@@ -1,13 +1,55 @@
-.footer {
-    background-color: #353535;
-    padding: 20px 0;
+@media screen and (min-width: 0px) {
 
-    &__content {
-        margin-left: 25px;
+    .footer {
+        background-color: #353535;
+        padding: 20px 0;
+
+        &__content {
+            margin-left: 25px;
+        }
+
+        &__icon {
+            padding-right: 10px;
+        }
     }
 
-    &__icon {
-        padding-right: 10px;
+    .footerMenu {
+        margin-top: -60px;
     }
+}
+
+
+
+@media screen and (min-width: 1000px) {
+   
+    .footer {
+        display: flex;
+        flex-direction: row-reverse;
+       
+
+        &__container {
+            display: flex;
+        }
+
+        &__title {
+            margin-right: 30px;
+        }
+
+        &__content {
+            margin-top: 40px;
+
+        }
+    }  
+
+    .mention {
+        display: flex;
+        margin-left: 30px;
+        margin-right: 50px;
+    }
+
+    .footerMenu {
+        margin-top: -60px;
+    }
+
 }
 
