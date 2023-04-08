@@ -1,0 +1,106 @@
+
+.loaderContainer {
+    position: fixed;
+    height:100%;
+    width: 100%;
+    display: flex;
+    background-color: #f1f1f1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Shrikhand', cursive;
+    font-size: 3rem;
+    z-index: 2;
+    animation: fade-out 1.5s forwards;
+}
+
+.letter {
+    color: $colorNumber;
+    animation: neonLight 1.5s;
+    @for $i from 1 through 8 {
+        &-#{$i} {
+            animation-delay: 0.1s * $i;
+        }
+    }
+}
+
+.loader-bar {
+    margin-top: 15vh;
+    height: 3vh;
+    width: 50vw;
+    border: solid 2px $colorNumber;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar {
+    height: 60%;
+    width: 99%;
+    background-color: blue;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: loading 1.4s forwards;
+}
+
+@keyframes loading {
+    0% {
+        transform: scalex(0);
+        background-color: #FF79DA;
+    }
+    17% {
+        transform: scaleX(.18);
+    }
+    24% {
+        transform: scaleX(.4);
+    }
+    46% {
+        transform: scaleX(.81);
+    }
+    100% {
+        transform: scalex(1);
+        background-color: #9356DC;
+    }
+}
+
+@keyframes neonLight {
+    0% {
+        color: $colorNumber;
+        text-shadow: 0px 0px 20px $colorNumber;
+    }
+    40% {
+        color: darken($colorNumber, 20%);
+        text-shadow: 0px 0px 20px $colorNumber;
+    }
+    90% {
+        color: darken($colorNumber, 10%);
+        text-shadow: none;
+    }
+    99% {
+        color: $colorNumber;
+        text-shadow: 0px 0px 20px $colorNumber;
+    }
+    100% {
+        color: $colorNumber;
+        text-shadow: 0px 0px 20px $colorNumber;
+    }
+}
+
+@keyframes fade-out {
+    90% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 0;
+        z-index: 1;
+    }
+    100%{
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+
+
+
+

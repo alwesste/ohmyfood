@@ -29,6 +29,9 @@
   h3 {
     font-size: 18px;
   }
+  .menu__content p {
+    font-size: 16px;
+  }
   .menu h2 {
     font-weight: 300;
     font-size: 16px;
@@ -59,6 +62,123 @@
   }
   h1 {
     font-size: 34px;
+  }
+}
+.loaderContainer {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background-color: #f1f1f1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Shrikhand", cursive;
+  font-size: 3rem;
+  z-index: 2;
+  animation: fade-out 1.5s forwards;
+}
+
+.letter {
+  color: #9356DC;
+  animation: neonLight 1.5s;
+}
+.letter-1 {
+  animation-delay: 0.1s;
+}
+.letter-2 {
+  animation-delay: 0.2s;
+}
+.letter-3 {
+  animation-delay: 0.3s;
+}
+.letter-4 {
+  animation-delay: 0.4s;
+}
+.letter-5 {
+  animation-delay: 0.5s;
+}
+.letter-6 {
+  animation-delay: 0.6s;
+}
+.letter-7 {
+  animation-delay: 0.7s;
+}
+.letter-8 {
+  animation-delay: 0.8s;
+}
+
+.loader-bar {
+  margin-top: 15vh;
+  height: 3vh;
+  width: 50vw;
+  border: solid 2px #9356DC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bar {
+  height: 60%;
+  width: 99%;
+  background-color: blue;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: loading 1.4s forwards;
+}
+
+@keyframes loading {
+  0% {
+    transform: scalex(0);
+    background-color: #FF79DA;
+  }
+  17% {
+    transform: scaleX(0.18);
+  }
+  24% {
+    transform: scaleX(0.4);
+  }
+  46% {
+    transform: scaleX(0.81);
+  }
+  100% {
+    transform: scalex(1);
+    background-color: #9356DC;
+  }
+}
+@keyframes neonLight {
+  0% {
+    color: #9356DC;
+    text-shadow: 0px 0px 20px #9356DC;
+  }
+  40% {
+    color: #6023a9;
+    text-shadow: 0px 0px 20px #9356DC;
+  }
+  90% {
+    color: #782cd3;
+    text-shadow: none;
+  }
+  99% {
+    color: #9356DC;
+    text-shadow: 0px 0px 20px #9356DC;
+  }
+  100% {
+    color: #9356DC;
+    text-shadow: 0px 0px 20px #9356DC;
+  }
+}
+@keyframes fade-out {
+  90% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
   }
 }
 @media screen and (min-width: 0px) {
@@ -274,7 +394,6 @@
     right: 30px;
     bottom: 25px;
     opacity: 1;
-    z-index: 1;
   }
   .heart .heart--full {
     display: none;
@@ -393,20 +512,19 @@
     margin: 20px auto;
     max-width: 600px;
     width: 95%;
-    padding: 0;
     overflow: hidden;
   }
   .menu__container:active .menu__slide {
     transform: translatex(-75px);
+  }
+  .menu__container:active .menu__content {
+    margin-right: 75px;
   }
   .menu__container .menu__slide {
     display: flex;
     position: absolute;
     height: 100%;
     right: -100px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
     transition: transform 0.25s;
   }
   .menu__container .menu__slidePrice {
@@ -419,7 +537,6 @@
     position: relative;
     width: 100px;
     height: 150px;
-    z-index: 1;
     bottom: 20px;
     background-color: #99E2D0;
   }
@@ -486,6 +603,8 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    transform-origin: left;
+    transition: margin-right 0.25s;
   }
   .menu__btn {
     display: flex;
@@ -514,7 +633,8 @@
     margin: auto;
   }
   .menu__title {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     padding-top: 40px;
   }
   .menu__container:hover .menu__slide {

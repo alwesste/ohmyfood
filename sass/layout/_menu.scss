@@ -32,22 +32,23 @@
             margin: 20px auto;
             max-width: 600px;
             width: 95%;  
-            padding: 0;
             overflow: hidden; 
-
+ 
             &:active .menu__slide {
                 transform: translatex(-75px);
+            }
+
+            &:active .menu__content {
+                margin-right: 75px;
             }
 
             & .menu__slide {
                 display: flex;
                 position: absolute;
                 height: 100%;
-                right:-100px;
-                text-overflow: ellipsis;
-                overflow: hidden;
-                white-space: nowrap;                
+                right:-100px;              
                 transition: transform 0.25s;
+                
 
                 &Price {
                     display: flex;
@@ -60,7 +61,6 @@
                     position: relative;
                     width: 100px;
                     height: 150px;
-                    z-index: 1;                        
                     bottom: 20px; 
                     background-color: $mintColor;                       
 
@@ -110,8 +110,7 @@
                 & .heart--full {
                     display: inline;
                 }
-            }
-            
+            } 
         }
 
         @keyframes fadeIn {
@@ -124,8 +123,6 @@
             margin: auto;
             padding-top: 30px ;
             width: 600px;
-
-
         }
 
         &__h2::after {
@@ -133,8 +130,7 @@
             display: block;
             border-bottom: 3px solid #99E2D0;
             padding-bottom: 5px;
-            width: 40px;
-            
+            width: 40px;    
         }
 
 
@@ -143,7 +139,8 @@
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
-
+            transform-origin: left;
+            transition: margin-right 0.25s;
 
         }
 
@@ -157,11 +154,11 @@
             margin: 50px auto 30px auto;
             justify-content: center; 
             transition: all 1s ease; 
+
             &:hover {
                 opacity: 0.8; 
                 box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.5);
             } 
-
 
             a {
                 color: white;
@@ -177,8 +174,10 @@
     .menu {
         width: 1055px;
         margin: auto;
+
         &__title {
-            text-align: center;
+            display: flex;
+            justify-content: center;
             padding-top: 40px;
         }
 
@@ -186,7 +185,6 @@
             &:hover .menu__slide {
                 transform: translatex(-75px);
             }
-  
         }
     }
 }
