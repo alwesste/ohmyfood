@@ -660,7 +660,7 @@ footer a {
     margin: auto;
   }
   .menu__titre {
-    width: 400px;
+    width: 350px;
   }
   .menu__container:hover .menu__slide {
     transform: translatex(-75px);
