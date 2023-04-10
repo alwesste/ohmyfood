@@ -77,18 +77,19 @@
             }
         }
     }
+    &__titre {
+        padding-top: 30px;
+        display: flex;
+        align-items: center;
+        max-width: 400px;
+        margin: auto;
+    }
 
     &__title {
-        display: flex;
         margin: auto;
-        padding: 30px 0px;
-        max-width: 600px;
-        padding-left: 10px;
     }    
 
     &__heart {
-        height: 20px;
-        padding-left: 50px;
 
         & .heart--full{
             display: none;
@@ -173,10 +174,8 @@
         width: 1055px;
         margin: auto;
 
-        &__title {
-            display: flex;
-            justify-content: center;
-            padding-top: 40px;
+        &__titre {
+            width: 400px;
         }
 
         &__container {
