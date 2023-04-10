@@ -1,31 +1,29 @@
-@media screen and (min-width: 0px) {
+.footer {
+    background-color: #353535;
+    padding: 20px 0;
 
-    .footer {
-        background-color: #353535;
-        padding: 20px 0;
-
-        &__content {
-            margin-left: 25px;
-        }
-
-        &__icon {
-            padding-right: 10px;
-        }
+    &__content {
+        margin-left: 25px;
     }
 
-    .footerMenu {
-        margin-top: -60px;
+    &__icon {
+        padding-right: 10px;
     }
+}
+
+.footerMenu {
+    margin-top: -60px;
 }
 
 
 
+
 @media screen and (min-width: 1000px) {
-   
+
     .footer {
         display: flex;
         flex-direction: row-reverse;
-       
+
 
         &__container {
             display: flex;
@@ -37,9 +35,8 @@
 
         &__content {
             margin-top: 40px;
-
         }
-    }  
+    }
 
     .mention {
         display: flex;
@@ -52,4 +49,3 @@
     }
 
 }
-
