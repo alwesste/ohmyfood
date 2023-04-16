@@ -64,8 +64,6 @@
 
                 &::after {
                     content: "\f058";
-                    width: 40px;
-                    height: 40px;
                     font-family: "Font Awesome 5 Free";
                     font-size: x-large;
                     font-weight: 900;
@@ -98,7 +96,7 @@
             -webkit-text-fill-color: transparent;
             -moz-background-clip: text;
             -moz-text-fill-color: transparent;
-            animation: fadeIn 1.5s forwards;
+            animation: fadeIn 1.5s;
         }
 
         &:active{
@@ -138,10 +136,8 @@
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
-        transform-origin: left;
         margin-right: 30px;
         transition: margin-right 0.25s;
-
     }
 
     &__btn {
