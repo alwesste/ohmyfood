@@ -24,6 +24,13 @@
         z-index: 1;
     }
 
+    &__search-bar {
+        border: none;
+        outline: none;
+        background-color: $locationColor;
+    }
+    
+
     &__location {
         background-color: $locationColor;   
         display: flex;
@@ -34,9 +41,12 @@
         margin: auto;
         
         & i {
-            margin-right: 10px;
+            margin-right: 15px;
         }
-    }  
+    } 
+    
+    
+
 }
 
 

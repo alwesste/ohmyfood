@@ -75,6 +75,7 @@
             }
         }
     }
+    
     &__titre {
         padding-top: 30px;
         display: flex;
@@ -96,10 +97,15 @@
             -webkit-text-fill-color: transparent;
             -moz-background-clip: text;
             -moz-text-fill-color: transparent;
-            animation: fadeIn 1.5s;
         }
 
         &:active{
+
+            & .maskMenu {
+                display: block;
+                animation: maskHide 1s forwards;
+            }
+
             & .heart--empty {
                 display: none;
             }
@@ -110,11 +116,6 @@
         } 
     }
 
-    @keyframes fadeIn {
-        from {opacity: 0;}
-        to {opacity: 1;}
-    }
-    
 
     &__h2 {
         margin: auto;
@@ -163,6 +164,26 @@
     }
 }
 
+.maskMenu {
+    background-color: #f7f7f7;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    right: 345px;
+    top: 50px;
+    transform-origin: top;
+    display: none;
+    
+}
+
+@keyframes maskHide {
+    from {
+        transform: scaleY(1);
+    }
+    to {
+        transform: scaleY(0);
+    }  
+}
 
 @media screen and (min-width: 1000px) {
     

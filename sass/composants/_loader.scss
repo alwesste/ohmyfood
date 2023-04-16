@@ -2,6 +2,8 @@
 .loaderContainer {
     position: fixed;
     display: flex;
+    height: 100%;
+    width: 100%;
     background-color: #f1f1f1;
     justify-content: center;
     align-items: center;
@@ -43,7 +45,7 @@
 
 @keyframes loading {
     0% {
-        transform: scalex(0);
+        transform: scaleX(0);
         background-color: #FF79DA;
     }
     17% {
@@ -56,7 +58,7 @@
         transform: scaleX(.81);
     }
     100% {
-        transform: scalex(1);
+        transform: scaleX(1);
         background-color: #9356DC;
     }
 }
