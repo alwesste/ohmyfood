@@ -169,7 +169,6 @@
     position: absolute;
     height: 40px;
     width: 40px;
-    right: 345px;
     top: 50px;
     transform-origin: top;
     display: none;
@@ -186,6 +185,8 @@
 }
 
 @media screen and (min-width: 1000px) {
+
+
     
     .menu {
         width: 1055px;
