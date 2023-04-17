@@ -99,7 +99,7 @@
             -moz-text-fill-color: transparent;
         }
 
-        &:active{
+        &:hover{
 
             & .maskMenu {
                 display: block;
@@ -111,7 +111,7 @@
             }
 
             & .heart--full {
-                display: inline;
+                display: inline;    
             }
         } 
     }

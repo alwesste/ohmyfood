@@ -619,14 +619,14 @@ footer a {
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
 }
-.menu__heart:active .maskMenu {
+.menu__heart:hover .maskMenu {
   display: block;
   animation: maskHide 1s forwards;
 }
-.menu__heart:active .heart--empty {
+.menu__heart:hover .heart--empty {
   display: none;
 }
-.menu__heart:active .heart--full {
+.menu__heart:hover .heart--full {
   display: inline;
 }
 .menu__h2 {
